@@ -128,6 +128,13 @@ ul li a:hover {
   box-shadow: 1px 1px 6px 0px rgba(221,221,221,1);
 }
 
+.project-tiles:hover {
+  -webkit-box-shadow: 1px 2px 6px 0px rgba(221,221,221,0.5);
+  -moz-box-shadow: 1px 2px 6px 0px rgba(221,221,221,0.5);
+  box-shadow: 1px 2px 6px 0px rgba(221,221,221,0.5);
+  transform: scale(1.01);
+}
+
 .project-title {
   text-align: center;
   margin: 0;
@@ -182,9 +189,10 @@ i {
 }
 
 footer {
+  box-sizing: border-box;
   background: #003366;
   color: white;
-  width: 97.05%;
+  width: 100%;
   padding-top: 2em;
   padding-left: 1em;
   padding-right: 1em;
@@ -256,5 +264,38 @@ footer a:active {
   
   .fab, far {
     margin: 0.25em;
+  }
+}
+
+/* iPad with portrait orientation */
+@media all and (device-width : 768px) and (device-height : 1024px) and (orientation : portrait) {
+  #welcome-section {
+    height: 1024px;
+  }
+  
+  #contact {
+    height: 1024px;
+  }
+}
+
+/* iPad with landscape orientation */
+@media all and (device-width : 768px) and (device-height : 1024px) and (orientation : landscape) {
+  #welcome-section {
+    height: 768px'
+  }
+  
+  #contact {
+    height: 768px;
+  }
+}
+
+/* Mobile Phones */
+@media screen and (device-aspect-ratio : 40/71) {
+  #welcome-section {
+    height: 500px;
+  }
+  
+  #contact {
+    height: 500px;
   }
 }
